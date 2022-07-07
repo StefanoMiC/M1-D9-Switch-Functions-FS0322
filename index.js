@@ -1,3 +1,78 @@
+let generateHeader = function (string, symbol, numberOfRepetitions) {
+  console.log("\n" + symbol.repeat(numberOfRepetitions) + string + symbol.repeat(numberOfRepetitions));
+};
+
+generateHeader("SWITCH STATEMENT", "=", 10);
+// Suppose the user can select the language of our website
+// And we receive the value from the option of the select (dropdown)
+let selectedLanguage = "FR";
+
+// Greet the person in his/her own language
+
+// if (selectedLanguage === "EN") {
+//   console.log("Good morning, Welcome to our website!");
+// } else if (selectedLanguage === "IT") {
+//   console.log("Buongiorno, Benvenuti sul nostro sito");
+// } else if (selectedLanguage === "ES") {
+//   console.log("Buenos dias,.....");
+//   console.log("Bonjour!");
+// } else if (selectedLanguage === "FR") {
+//   console.log("Bonjour!");
+// } else {
+//   // this will happen in case of a not supported language being selected
+//   console.log("Language not supported!");
+// }
+
+switch (
+  selectedLanguage // the value we are checking against (for equality)
+) {
+  case "EN": // this is the value that will be evaluated against the initial condition
+    console.log("Good morning, Welcome to our website!");
+    break;
+  case "IT":
+    console.log("Buongiorno, Benvenuti sul nostro sito");
+    break;
+  case "ES":
+    console.log("Buenos dias,.....");
+    break;
+  case "FR":
+    console.log("Bonjour!");
+    break;
+  default:
+    console.log("Language not supported!");
+    break;
+}
+
+let userName = "Miles";
+let greeting;
+
+switch (userName) {
+  case "Jeffrey":
+    greeting = "Good morning, Jeffrey";
+    break;
+  case "Francesco":
+    greeting = "Buongiorno Francesco!";
+    break;
+  case "Miles":
+    greeting = "hey Miles!";
+    break;
+  case "Brandon":
+    greeting = "what up Brandon!?";
+    break;
+  default:
+    greeting = `Nice to see you ${userName}! Have a good day!`;
+}
+
+console.log(greeting);
+
+// this would translate to:
+
+// if (userName === "Jeffrey") {
+//   greeting = "Good morning, Jeffrey";
+// } else if (userName === "Francesco") {
+//   greeting = "Buongiorno Francesco!";
+// }
+
 // you can see how the switch case is better than this
 
 generateHeader("LOOPS", "=", 3);
